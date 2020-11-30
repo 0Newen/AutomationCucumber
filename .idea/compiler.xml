@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="opensourcecms" target="8" />
+      <module name="opensourcecms" target="7" />
     </bytecodeTargetLevel>
   </component>
 </project>
