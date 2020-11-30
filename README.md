@@ -1,2 +1,2 @@
 # AutomationCucumber
-It's is a complete test Web scenarios automated with Cucumber, Selenium and Java.
+It's is a basic test Web scenario automated with Cucumber, Selenium and Java.
