@@ -16,7 +16,7 @@ import java.util.Map;
 public class loginStep extends baseUtil {
 
     private baseUtil base;
-    loginPage loginPage=new loginPage(base.Driver);
+    loginPage loginPage = new loginPage(base.Driver);
 
     public loginStep(baseUtil base) {
         this.base = base;
@@ -25,7 +25,7 @@ public class loginStep extends baseUtil {
     @And("I navigate to the login page")
     public void iNavigateToTheLoginPage() {
         base.Driver.navigate().to("https://s1.demo.opensourcecms.com/wordpress/wp-login.php?loggedout=true");
-        WebDriverWait wait=new WebDriverWait(base.Driver,2);
+        WebDriverWait wait = new WebDriverWait(base.Driver, 2);
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("loginform")));
     }
 
@@ -48,13 +48,9 @@ public class loginStep extends baseUtil {
 
     @Given("a list of users in a table")
     public void aListOfUsersInATable(List<User> users) {
-        for (User user:users) {
-            loginPage.Login(user.getUsername(),user.getPassword());
+        for (User user : users) {
+            loginPage.Login(user.getUsername(), user.getPassword());
         }
-    }
-
-    @Given("^I enter ([^\"]*) and ([^\"]*)")
-    public void iEnterUsernameAndPassword(String username, String password) {
     }
 
     @Then("I check the error message Appears")
@@ -62,9 +58,9 @@ public class loginStep extends baseUtil {
         loginPage.checkWrongCredentials();
     }
 
-    @And("I click lst your password?")
+    @And("I click lost your password?")
     public void iClickLstYourPassword() {
-        loginPage.rcoveryPassword();
+        loginPage.recoveryPassword();
     }
 
     @Then("I check the button for recovery")
@@ -72,15 +68,15 @@ public class loginStep extends baseUtil {
         loginPage.chechRecoveryPassword();
     }
 
-    public class User{
+    public class User {
 
         public String username;
         public String password;
 
 
         public User(String username, String password) {
-            this.username=username;
-            this.password=password;
+            this.username = username;
+            this.password = password;
         }
 
         public String getUsername() {

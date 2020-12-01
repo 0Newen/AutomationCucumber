@@ -29,10 +29,10 @@ public class loginPage {
     @FindBy(how = How.ID,using = "login_error")
     public WebElement txtError;
 
-    @FindBy(how = How.NAME,using = "nav")
+    @FindBy(how = How.XPATH,using = "//*[@id=\"nav\"]")
     public WebElement btnLostUPass;
 
-    @FindBy(how = How.ID,using = "Get New Password")
+    @FindBy(how = How.ID,using = "wp-submit")
     public WebElement btnRecoveryPass;
 
 
@@ -55,8 +55,8 @@ public class loginPage {
         Assert.assertTrue(txtError.isDisplayed());
     }
 
-    public void rcoveryPassword(){
-        btnLostUPass.submit();
+    public void recoveryPassword(){
+        btnLostUPass.click();
     }
 
     public void chechRecoveryPassword(){

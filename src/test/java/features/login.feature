@@ -19,5 +19,5 @@ Feature:LoginFeature
 
   Scenario: Lost my password
     And I navigate to the login page
-    And I click lst your password?
+    And I click lost your password?
     Then I check the button for recovery

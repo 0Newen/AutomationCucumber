@@ -4,6 +4,6 @@ import org.openqa.selenium.WebDriver;
 
 public class baseUtil {
 
-    public WebDriver Driver;
+    public static WebDriver Driver;
 
 }

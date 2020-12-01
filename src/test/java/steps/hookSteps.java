@@ -21,12 +21,13 @@ public class hookSteps extends baseUtil {
         System.out.println("Opening the browser: Chrome");
         System.setProperty("webdriver.chrome.driver","C:\\Users\\57316\\IdeaProjects\\opensourcecms\\src\\Drivers\\chromedriver.exe");
         base.Driver=new ChromeDriver();
+        base.Driver.manage().window().maximize();
     }
 
     @After
     public void tearDownTest(Scenario scenario){
         System.out.println("Closing the browser: Chrome");
-        base.Driver.close();
+        base.Driver.quit();
     }
 
 }
